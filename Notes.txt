@@ -1,0 +1,151 @@
+
+     //**          String characteristic     **//
+
+      String character= "This is a String character says \"Hello\"";   // Double Quotes "" Means this is used to enclose a  String literal..
+
+              /*   Let's add a Backslash to the start of each double code which needs to be a part of the String.
+              The backslash double quote is treated as a single character in  java and java compiler recognize this as a
+              double quote Which needs to be part of sting , rather than as a means to start or end a string definition.
+              *  */
+
+              String message= "Fiona says \'hello\'";
+              String message= "Fiona says \n hello";
+              String message= "Fiona says \t hello";
+              String message= "Fiona \t\t says \n\n Hello";
+              String message= "Fiona\b says Hello";  // a will be removed
+
+
+     //**          Arrays     **//
+
+
+
+
+      //**          Getter anf Setter Methods    **//
+
+      /* If you want to change the state of your fields from inside your class the best way to do this by using the setters.
+      // and likewise if you want to access the value of your state even from inside your class the best way to do this by using the getters
+      // Bcz by using the setter ans getter you maintain the abstraction provided by those methods.
+      */ and its a recommended practice
+
+
+//     Default Constructor   //
+
+            /* using Default Constructor
+              These are special methods which help to create an object and bring it into life by assigning memory and also assigning
+               values to fields and the state of the object.
+               public class Car { }
+              At this point our class already implicitly extends Java.lang.Object
+               this is implicit we don't need to make it any more explicit
+               Java has provided us with a default no argument constructor which will be used in order to create objects of the car class.
+
+            /* So the default no argument constructor is going to assign independent memory locations for the object that's being
+                constructed     */
+
+*****************************************************************************************************************
+   Relations btw Static and Non Static methods.
+------------------------------------------------------
+        Non Static methods are commonly know as instance methods bcz of course they are specific to a particular instance.
+     1-So That Non-Static fields as well as Non-static members,just cannot be accessed from a static context.
+     2-We can invoke instances method(Non-Static methods) even in a static context, provided with some object to server as the receiver.
+     3- instances method can invoke static methods.
+     4-instances method can invoke Others instances methods.
+     5-static methods can invoke Others static methods.
+
+*****************************************************************************************************************
+   Comparison Btw == and .equals methods.
+------------------------------------------------------
+
+     .equals methods is inherited from java.lang,object just like the toString() method and that, in turn means that
+      there is a default implementation  of .equals() method which is now being invoked, thats means you are comparing two objects based
+      on whether they are reside at the same location on the java heap memory.
+
+      == and .equals methods are same in behaviour only the difference is that i.e we can override the implementation
+      of .equals() ,but we cannot change the working of the double equals operator.
+
+      Double equals operator in java is always going to compare objects based on their memory locations.
+
+
+*****************************************************************************************************************
+   INHERITANCE IN JAVA
+------------------------------------------------------
+     Enables Functionality present in base class (java.lang.object), to be available in objects of a derived class.
+     It uses Maximize code re-use and minimize amount of work required to extend base classes.
+     Inheritance is meant for expressing Is-a Relationship means (Model entities using a Is-a Relationship ).Every java class
+     inherits implicitly form the common base class java.lang.object, and that means that every object of every java class is a java.lang.object.
+     Means that all of the common functionality, which is going to be required by all objects,can be placed in that universal base class java.lang.object.
+     And this is true of all Inheritance relationship.
+     Any time you have two types of entities where one is a subcategory of another, you should be thinking of using Inheritance.
+
+     Member variable of one class contained within another class is know as composition.composition is meant for Has-a Relationship.
+     One class that extends or inherits from another class is know as Inheritance.
+
+     Inheritance helps to make classes open for extension,but close for modification(Base class).ie it helps to implement
+     the open-closed principle of software design.
+
+     The common base class in Inheritance is a unit of abstraction and that unit of abstraction has Encapsulated all common functionality.
+
+     When one object belongs to a class that inherits from another class, that object acquires all the behavior, as well as
+     all of the state of objects of the parent class.
+
+
+*****************************************************************************************************************
+        POLYMORPHISM IN JAVA
+------------------------------------------------------
+
+     The ability of an object to behave in multiple ways depending on the situation.
+
+
+
+*****************************************************************************************************************
+        ENCAPSULATION IN JAVA
+------------------------------------------------------
+     Data associated with an object of a class is hidden within the class and should only be accessed using the method of the class.
+
+
+
+
+ *****************************************************************************************************************
+         SUPER keyword IN JAVA
+ ------------------------------------------------------
+   The super keyword is very powerful way of accessing functionality form the base classes.when you are in inside are derived class.
+
+
+
+  *****************************************************************************************************************
+          Compile-Time Polymorphism IN JAVA
+  ------------------------------------------------------
+
+Compile-Time Polymorphism in java achieved through method Overloading.we define multiple functions with the same name but different input argument types.
+We discuss that the names of the input parameters did not matter,we could have two functions with the same name and same parameters names
+but a different parameters types.
+
+
+  *****************************************************************************************************************
+          INTERFACES IN JAVA
+  ------------------------------------------------------
+ An Interface is effectively a class in which all methods are public and abstract by default,and interfaces are ubiquitous in
+   Java Library and frameworks,bcz they are such a great way of defining API's.
+ An Interface is effectively an abstract class in which all methods are abstract and public.
+ 1- Abstract class is one which cannot be directly instantiated.Abstract classes often contained Abstract methods,These were methods which did not have an implementations
+   in the base class.
+ 2- An interface is a construct in which every method is abstract.
+ 3- An interface has been thought of as a collection of public abstract methods.
+ 4- An interface does not contain any implementations.
+ 5- When you introduce a member variable or field into a interface,it's going to be public,static,and final.
+ 6- Java does not allow multiple inheritance of abstract or concrete base classes,but is does allow multiple inheritance via interfaces
+   ex-public class Lamborghini implements SportsCar,Automobile{ }: A Lamborghini has an IS A relationship with SportsCar and Automobile.
+   This is indeed multiple inheritance.
+ 7- Its possible for some classes to override the default implementations of an interface method.On the other hand,other classes might choose not
+    to do so,and they can still continue to work with the default interface implementations.
+
+
+   ********** DEFAULT INTERFACE METHOD  *******
+   1- Default interface methods enable an Class designer to add methods to an interface in future versions without breaking source or
+      binary compatibility with existing implementations of that interface.
+
+   Why Such a feature is Necessary?
+    Is required for those rare cases when you as a class designer,need to violate the open closed principle and change the definitions of your
+    Interface after it's been implemented by classes out there.And remember that the open closed principle stated that classes and interfaces
+    Should be open for extension,but closed for Modification.
+
+
